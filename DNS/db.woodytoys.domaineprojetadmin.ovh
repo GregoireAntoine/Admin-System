@@ -1,0 +1,16 @@
+$ORIGIN woodytoys.domaineprojetadmin.ovh.
+$TTL 86400      ; 1 day
+@           IN     SOA      ns.woodytoys.domaineprojetadmin.ovh.  ns.woodytoys.domaineprojetadmin.ovh.(
+                                1          ; serial  
+                                21600      ; refresh (6 hours)
+                                3600       ; retry (1 hour)
+                                604800     ; expire (1 week)
+                                86400      ; minimum (1 day)
+                                )
+;
+@           IN      NS      ns.woodytoys.domaineprojetadmin.ovh.
+@           IN      A       51.83.98.86
+www         IN      A       51.83.98.86
+ns          IN      A       51.83.98.86
+b2b         IN      A       51.83.98.86
+

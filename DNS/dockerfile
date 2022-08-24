@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+
+#Bind9 et outils nécessaire
+RUN apt update && apt upgrade -y
+RUN apt install bind9 bind9utils dnsutils net-tools -y 
+RUN apt install iputils-ping -y
+
+COPY /etc/bind/named.conf /etc/bind/named.conf
+COPY /etc/bind/db.wood.domaineprojetadmin.ovh /etc/bind/db.wood.domaineprojetadmin.ovh
+
+CMD ["named" , "-c", "/etc/bind/named.conf" , "-g"]

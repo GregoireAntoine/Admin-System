@@ -9,9 +9,13 @@ $TTL 86400      ; 1 day
                                 )
 ;
 @           IN      NS      ns.wood.domaineprojetadmin.ovh.
-@           IN      A       51.83.98.86
-www         IN      A       51.83.98.86
-ns          IN      A       51.83.98.86
-b2b         IN      A       51.83.98.86
-mail        IN	    A	    51.83.98.86
+@           IN      A       51.83.98.86                         # à remplacer pour votre ip
+www         IN      A       51.83.98.86                         # à remplacer pour votre ip
+ns          IN      A       51.83.98.86                         # à remplacer pour votre ip
+b2b         IN      A       51.83.98.86                         # à remplacer pour votre ip
+mail        IN	    A	    51.83.98.86                         # à remplacer pour votre ip
 @	    IN      MX  10  mail.wood.domaineprojetadmin.ovh. 
+
+# Inclus les les clés nécessaires à DNSSEC
+$INCLUDE "/etc/bind/keys/Kwood.domaineprojetadmin.ovh.+008+57526.key" ;
+$INCLUDE "/etc/bind/keys/Kwood.domaineprojetadmin.ovh.+008+21354.key" ;
